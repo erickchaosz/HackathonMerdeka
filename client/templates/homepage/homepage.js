@@ -4,9 +4,15 @@ Template.homepage.events({
     e.stopPropagation();
 
     if (Meteor.isCordova) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        Session.set('lat', position.coords.latitude);
-        Session.set('lon', position.coords.longitude);
+
+      var userGeoLocation = new ReactiveVar(null);
+
+      Tracker.autorun(function (computation) {
+        userGeoLocation.set(Geolocation.latLng());
+        if (userGeoLocation.get()) {
+          Session.set('geolocation', userGeoLocation.get());
+          computation.stop();
+        }
       });
 
       navigator.device.capture.captureVideo(captureSuccess,

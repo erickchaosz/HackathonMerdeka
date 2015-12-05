@@ -22,3 +22,4 @@ iron:router
 edgee:slingshot
 mdg:geolocation
 reactive-var
+http

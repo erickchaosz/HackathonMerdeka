@@ -16,19 +16,15 @@ Template.upload.events({
 });
 
 Template.upload.helpers({
-  lat: function() { return Session.get('lat'); },
-  lon: function() { return Session.get('lon'); }
-});
-
-var userGeoLocation = new ReactiveVar(null);
-
-Tracker.autorun(function (computation) {
-  userGeoLocation.set(Geolocation.latLng());
-  if (userGeoLocation.get()) {
-    console.log("hello world!");
-    computation.stop();
-  }
-
+  loc: function() {
+    var geolocation = Session.get('geolocation');
+    HTTP.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyDfQqSLQ3BzIXVVus2fTQbV1mMV3SdWoFU', {},
+             function(e, r) {
+               console.log(JSON.stringify(r));
+             });
+    return Session.get('geolocation');
+  },
+  error: Geolocation.error
 });
 
 function onFileReadSuccess(fileEntry) {
@@ -40,7 +36,18 @@ function onFileReadSuccess(fileEntry) {
       var blob = new Blob([dataView], {type: Session.get('fileType')});
       blob.name = Session.get('fileName');
 
-      Uploader = new Slingshot.Upload();
+      Uploader = new Slingshot.Upload("mdkUploads");
+      Uploader.send(blob, function (error, downloadUrl) {
+        if (error) {
+          console.log(error);
+        }
+      });
     }
+
+    reader.readAsArrayBuffer(file);
   });
+}
+
+function onFileReadFail() {
+  console.log("Error");
 }

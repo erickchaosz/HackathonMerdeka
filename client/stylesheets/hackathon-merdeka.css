@@ -1,6 +1,7 @@
 /* CSS declarations go here */
-html {
-	text-align: center;
+
+.location {
+    background-color: WHITE;
 }
 
 body {
@@ -98,7 +99,9 @@ button:focus {
         margin-top:50%;
 	border-radius: .5em;
 
-}	
+}
+
+
 
 header {
 	background: #d2edf4;
