@@ -25,9 +25,8 @@ var userGeoLocation = new ReactiveVar(null);
 Tracker.autorun(function (computation) {
   userGeoLocation.set(Geolocation.latLng());
   if (userGeoLocation.get()) {
-    console.log(userGeoLocation.get());
+    console.log("hello world!");
     computation.stop();
-
   }
 
 });

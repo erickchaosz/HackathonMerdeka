@@ -1,1 +1,315 @@
 /* CSS declarations go here */
+body {
+	font-family: sans-serif;
+	background-color: #000;
+	background-image: linear-gradient(to bottom, #000, #000 100%);
+	background-attachment: fixed;
+	
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	
+	padding: 0;
+	margin: 0;
+	
+	font-size: 14px;
+}
+
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+	min-heighted: 100%;
+	background: white;
+}
+
+.shape {
+	width: 10%;
+	height: 10%;
+}
+
+.round-button-circle {
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	height: 0;
+	padding-bottom: 50%;
+	border-radius: 50%;
+	background-color: red;
+        position: relative;
+        left: 25%;
+        margin-top:50%;
+}
+
+button:focus {
+    outline: none;
+}
+
+.stop-square {
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	height: 50%;
+	background: red;
+	border-radius: 25px;
+}
+
+.finished-square {
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-block;
+	background: green;
+	background-image: linear-gradient(green, light-green);
+	
+	text-decoration: none;
+	color: #FFF;
+	font-size: 25px;
+	font-family: sans-serif;
+	font-weight: 100;
+        position: relative;
+        left: 35%;
+        margin-top:50%;
+
+}	
+
+header {
+	background: #d2edf4;
+	background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
+	padding: 20px 15px 15px 15px;
+	position: relative;
+}
+
+#login-buttons {
+	display: block;
+}
+
+h1 {
+	font-size: 1.5em;
+	margin: 0;
+	margin-bottom: 10px;
+	display: inline-block;
+	margin-right: 1em;
+}
+
+form {
+	margin-top: 10px;
+	margin-bottom: -10px;
+	position: relative;
+}
+
+.new-task input {
+	box-sizing: border-box;
+	padding: 10px 0;
+	background: transparent;
+	border: none;
+	width: 100%;
+	padding-right: 80px;
+	font-size: 1em;
+}
+
+.new-task input:focus {
+	outline: 0;
+}
+
+.delete {
+	float: right;
+	font-weight: bold;
+	background: none;
+	font-size: 1em;
+	border: none;
+	position: relative;
+}
+
+header .hide-completed {
+	float: right;
+}
+
+.toggle-private {
+	margin-left: 5px;
+}
+
+@media (max-width: 600px) {
+	li {
+		padding: 12px 15px;
+	}
+	
+	.search {
+		width: 150px;
+		clear: both;
+	}
+	
+	.new-task input {
+		padding-bottom: 5px;
+	}
+}
+
+
+#floatingCircles {
+	position: relative;
+	width: 125px;
+	height: 125px;
+	margin: auto;
+	transform: scale(0.6);
+		-o-transform: scale(0.6);
+		-ms-transform: scale(0.6);
+		-webkit-transform: scale(0.6);
+		-moz-transform: scale(0.6);
+}
+
+.f_circle {
+	position: absolute;
+	background-color: rgba(0,0,0,0.17);
+	height: 22px;
+	width: 22px;
+	border-radius: 12px;
+		-o-border-radius: 12px;
+		-ms-border-radius: 12px;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+	animation-name: f_fade;
+		-o-animation-name: f_fade;
+		-ms-animation-name: f_fade;
+		-webkit-animation-name: f_fade;
+		-moz-animation-name: f_fade;
+	animation-duration: 2.44s;
+		-o-animation-duration: 2.44s;
+		-ms-animation-duration: 2.44s;
+		-webkit-animation-duration: 2.44s;
+		-moz-animation-duration: 2.44s;
+	animation-iteration-count: infinite;
+		-o-animation-iteration-count: infinite;
+		-ms-animation-iteration-count: infinite;
+		-webkit-animation-iteration-count: infinite;
+		-moz-animation-iteration-count: infinite;
+	animation-direction: normal;
+		-o-animation-direction: normal;
+		-ms-animation-direction: normal;
+		-webkit-animation-direction: normal;
+		-moz-animation-direction: normal;
+}
+
+#frotate_01 {
+	left: 0;
+	top: 51px;
+	animation-delay: 0.92s;
+		-o-animation-delay: 0.92s;
+		-ms-animation-delay: 0.92s;
+		-webkit-animation-delay: 0.92s;
+		-moz-animation-delay: 0.92s;
+}
+
+#frotate_02{
+	left: 15px;
+	top: 15px;
+	animation-delay: 1.22s;
+		-o-animation-delay: 1.22s;
+		-ms-animation-delay: 1.22s;
+		-webkit-animation-delay: 1.22s;
+		-moz-animation-delay: 1.22s;
+}
+
+#frotate_03{
+	left: 51px;
+	top: 0;
+	animation-delay: 1.53s;
+		-o-animation-delay: 1.53s;
+		-ms-animation-delay: 1.53s;
+		-webkit-animation-delay: 1.53s;
+		-moz-animation-delay: 1.53s;
+}
+
+#frotate_04{
+	right: 15px;
+	top: 15px;
+	animation-delay: 1.83s;
+		-o-animation-delay: 1.83s;
+		-ms-animation-delay: 1.83s;
+		-webkit-animation-delay: 1.83s;
+		-moz-animation-delay: 1.83s;
+}
+
+#frotate_05{
+	right: 0;
+	top: 51px;
+	animation-delay: 2.14s;
+		-o-animation-delay: 2.14s;
+		-ms-animation-delay: 2.14s;
+		-webkit-animation-delay: 2.14s;
+		-moz-animation-delay: 2.14s;
+}
+
+#frotate_06{
+	right: 15px;
+	bottom: 15px;
+	animation-delay: 2.44s;
+		-o-animation-delay: 2.44s;
+		-ms-animation-delay: 2.44s;
+		-webkit-animation-delay: 2.44s;
+		-moz-animation-delay: 2.44s;
+}
+
+#frotate_07{
+	left: 51px;
+	bottom: 0;
+	animation-delay: 2.75s;
+		-o-animation-delay: 2.75s;
+		-ms-animation-delay: 2.75s;
+		-webkit-animation-delay: 2.75s;
+		-moz-animation-delay: 2.75s;
+}
+
+#frotate_08{
+	left: 15px;
+	bottom: 15px;
+	animation-delay: 3.06s;
+		-o-animation-delay: 3.06s;
+		-ms-animation-delay: 3.06s;
+		-webkit-animation-delay: 3.06s;
+		-moz-animation-delay: 3.06s;
+}
+
+@keyframes f_fade{
+	0%{
+		background-color: rgb(250,58,58);
+	}
+	100%{
+		background-color: rgb(255,255,255);
+	}
+}
+
+@-o-keyframes f_fade{
+	0%{
+		background-color: rgb(250,58,58);
+	}
+	100%{
+		background-color: rgb(255,255,255);
+	}
+}
+
+@-ms-keyframes f_fade{
+	0%{
+		background-color: rgb(250,58,58);
+	}
+	100%{
+		background-color: rgb(255,255,255);
+	}
+}
+
+@-webkit-keyframes f_fade{
+	0%{
+		background-color: rgb(250,58,58);
+	}
+	100%{
+		background-color: rgb(255,255,255);
+	}
+}
+
+@-moz-keyframes f_fade{
+	0%{
+		background-color: rgb(250,58,58);
+	}
+	100%{
+	background-color: rgb(255,255,255);
+	}
+}

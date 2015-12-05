@@ -8,8 +8,7 @@ Template.homepage.events({
         Session.set('lat', position.coords.latitude);
         Session.set('lon', position.coords.longitude);
       });
-      var geolocation = Geolocation.latLng();
-      console.log(geolocation);
+
       navigator.device.capture.captureVideo(captureSuccess,
                                             captureError, {
                                               limit: 1, duration: 900
