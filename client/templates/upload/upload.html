@@ -1,0 +1,19 @@
+<template name="upload">
+<head>
+  <title>hackathon-merdeka</title>
+</head>
+
+<body>
+  {{> upload_video}}
+  <div class="location">
+  {{loc.lat}}
+  {{loc.lng}}
+  {{date}}
+  </div>
+</body>
+
+</template>
+
+<template name="upload_video">
+  <button type="button" class="upload-video finished-square">Upload</button>
+</template>

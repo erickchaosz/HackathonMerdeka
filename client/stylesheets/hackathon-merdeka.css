@@ -1,6 +1,7 @@
 /* CSS declarations go here */
-html {
-	text-align: center;
+
+.location {
+    background-color: WHITE;
 }
 
 body {
@@ -41,6 +42,13 @@ body {
 	padding-bottom: 50%;
 	border-radius: 50%;
 	background-color: red;
+        position: relative;
+        left: 25%;
+        margin-top:50%;
+}
+
+button:focus {
+    outline: none;
 }
 
 .stop-square {
@@ -85,8 +93,15 @@ body {
 	font-size: 25px;
 	font-family: sans-serif;
 	font-weight: 100;
+
+        position: relative;
+        left: 35%;
+        margin-top:50%;
 	border-radius: .5em;
-}	
+
+}
+
+
 
 header {
 	background: #d2edf4;

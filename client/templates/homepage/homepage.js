@@ -4,6 +4,17 @@ Template.homepage.events({
     e.stopPropagation();
 
     if (Meteor.isCordova) {
+
+      var userGeoLocation = new ReactiveVar(null);
+
+      Tracker.autorun(function (computation) {
+        userGeoLocation.set(Geolocation.latLng());
+        if (userGeoLocation.get()) {
+          Session.set('geolocation', userGeoLocation.get());
+          computation.stop();
+        }
+      });
+
       navigator.device.capture.captureVideo(captureSuccess,
                                             captureError, {
                                               limit: 1, duration: 900
@@ -16,8 +27,9 @@ Template.homepage.events({
 });
 
 function captureSuccess(mediaFiles) {
-  mediaFile = mediaFiles[0];
+  var mediaFile = mediaFiles[0];
   Session.set('mediaFile', mediaFile);
+  Router.go('upload');
 }
 
 function captureError(error) {
