@@ -12,6 +12,7 @@ Template.upload.events({
       onFileReadSuccess,
       onFileReadFail
     );
+    Route.go("loading");
   }
 });
 
