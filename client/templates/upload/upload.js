@@ -17,12 +17,10 @@ Template.upload.events({
 
 Template.upload.helpers({
   loc: function() {
-    var geolocation = Session.get('geolocation');
-    HTTP.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyDfQqSLQ3BzIXVVus2fTQbV1mMV3SdWoFU', {},
-             function(e, r) {
-               console.log(JSON.stringify(r));
-             });
     return Session.get('geolocation');
+  },
+  date: function() {
+    return new Date();
   },
   error: Geolocation.error
 });
