@@ -229,7 +229,7 @@ header .hide-completed {
 		-moz-animation-delay: 0.92s;
 }
 
-#frotate_02{
+#frotate_02 {
 	left: 15px;
 	top: 15px;
 	animation-delay: 1.22s;
@@ -239,7 +239,7 @@ header .hide-completed {
 		-moz-animation-delay: 1.22s;
 }
 
-#frotate_03{
+#frotate_03 {
 	left: 51px;
 	top: 0;
 	animation-delay: 1.53s;
@@ -249,7 +249,7 @@ header .hide-completed {
 		-moz-animation-delay: 1.53s;
 }
 
-#frotate_04{
+#frotate_04 {
 	right: 15px;
 	top: 15px;
 	animation-delay: 1.83s;
@@ -259,7 +259,7 @@ header .hide-completed {
 		-moz-animation-delay: 1.83s;
 }
 
-#frotate_05{
+#frotate_05 {
 	right: 0;
 	top: 51px;
 	animation-delay: 2.14s;
@@ -269,7 +269,7 @@ header .hide-completed {
 		-moz-animation-delay: 2.14s;
 }
 
-#frotate_06{
+#frotate_06 {
 	right: 15px;
 	bottom: 15px;
 	animation-delay: 2.44s;
@@ -279,7 +279,7 @@ header .hide-completed {
 		-moz-animation-delay: 2.44s;
 }
 
-#frotate_07{
+#frotate_07 {
 	left: 51px;
 	bottom: 0;
 	animation-delay: 2.75s;
@@ -289,7 +289,7 @@ header .hide-completed {
 		-moz-animation-delay: 2.75s;
 }
 
-#frotate_08{
+#frotate_08 {
 	left: 15px;
 	bottom: 15px;
 	animation-delay: 3.06s;
@@ -299,7 +299,7 @@ header .hide-completed {
 		-moz-animation-delay: 3.06s;
 }
 
-@keyframes f_fade{
+@keyframes f_fade {
 	0%{
 		background-color: rgb(250,58,58);
 	}
