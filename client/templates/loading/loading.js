@@ -2,6 +2,6 @@ Template.loading.onRendered = function () {
 	if (!this.onRendered)
 	{
 		this._onRendered = true;
-		setTimeout(Route.go("homepage"), 2000);
+		setTimeout(Router.go("homepage"), 2000);
 	}
 }
